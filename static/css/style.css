@@ -1,0 +1,25 @@
+.container-fluid {
+    background-color: yellow;
+    background-image: url(../img/larger.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-blend-mode: darken; */
+    /* color: white; */
+    padding: 50px 0px 50px 0px;
+}
+
+a {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: x-large !important;
+}
+
+a:hover {
+    /* background-color: black; */
+    outline: 5px solid white;
+}
+
+.card-img {
+    height: 10em;
+}
