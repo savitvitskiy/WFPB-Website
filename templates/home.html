@@ -3,25 +3,44 @@
 
 {% block content %}
 
-<h1>Home</h1>
+<!-- <h1>Home</h1> -->
 
-# create models to dynamically load images with for loop
-
-<div class="container text-center">
-    <div class="row row-cols-3">
-      {% for category in categories %}
-      <div class="col">
-        <div class="card">
-            {% if category.image %}
-            <img src="{{ category.image.url }}" alt="" class="card-img">
-            {% endif %}
-            <div class="card-img-overlay">
-                <p>{{ category.name }}</p>
+<div class="section">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for category in categories %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        {% if category.image %}
+                        <div class="background-image" style="background-image: url( {{category.image.url}} )"></div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">{{ category.name }}</h4>
+                            <!-- <p class="card-text"> {{ category.body }}</p> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
     </div>
-  </div>
+</div>
+
+<div class="section">
+    <div class="quote">
+        <div>
+            <img src="static/img/salad.jpeg" alt="">
+        </div>
+        <div>
+           <p>Next Section</p>
+            <p>another paragraph</p>
+            <p>the next paragraph</p>
+            <p>trying to see how the container behaves</p> 
+        </div>
+    </div>
+</div>
 
 {% endblock %}

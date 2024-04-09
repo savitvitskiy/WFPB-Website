@@ -1,12 +1,46 @@
+.container {
+    max-width: 100% !important;
+}
+
+.section {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 100% !important;
+    background-color: gray;
+}
+
+.quote {
+    background-color: white;
+    padding: 1rem;
+}
+
 .container-fluid {
     background-color: yellow;
-    background-image: url(../img/larger.webp);
+    background-image: url(../img/menu.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /* background-blend-mode: darken; */
     /* color: white; */
     padding: 50px 0px 50px 0px;
+}
+
+.background-image {
+    background-color: yellow;
+    /* background-image: url( {{category.image.url}} ); */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    padding: 50px;
+}
+
+/* .card {
+    background-color: gray !important;
+} */
+
+.card-title {
+    padding: 1rem 0rem 1rem 0rem;
 }
 
 a {
@@ -18,8 +52,4 @@ a {
 a:hover {
     /* background-color: black; */
     outline: 5px solid white;
-}
-
-.card-img {
-    height: 10px;
 }
