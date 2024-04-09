@@ -12,7 +12,9 @@
       {% for category in categories %}
       <div class="col">
         <div class="card">
-            <img src="https://static01.nyt.com/images/2018/05/23/dining/23fruit/23fruit-superJumbo.jpg" class="card-img">
+            {% if category.image %}
+            <img src="{{ category.image.url }}" alt="" class="card-img">
+            {% endif %}
             <div class="card-img-overlay">
                 <p>{{ category.name }}</p>
             </div>
