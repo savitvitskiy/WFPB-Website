@@ -35,6 +35,17 @@
     padding: 50px;
 }
 
+.acc-img {
+    /* height: 10rem; */
+    /* width: 100%; */
+    padding: 150px 0px 150px 0px;
+    background-color: green;
+    background-image: url(../img/salad.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
 /* .card {
     background-color: gray !important;
 } */

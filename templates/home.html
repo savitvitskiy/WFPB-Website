@@ -5,7 +5,7 @@
 
 <!-- <h1>Home</h1> -->
 
-<div class="section">
+<div class="container section">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
         <div class="col">
@@ -29,20 +29,20 @@
     </div>
 </div>
 
-<div class="section">
-    <div class="quote">
-        <div>
-            <img src="static/img/salad.jpeg" alt="">
-        </div>
-        <div>
-           <p>Next Section</p>
-            <p>another paragraph</p>
-            <p>the next paragraph</p>
-            <p>trying to see how the container behaves</p> 
-        </div>
+<div class="container section text-center">
+    <div class="row row-cols-2">
+      <div class="col-6 col-md-4">
+        <div class="acc-img"></div>
+        <!-- <img src="{% static 'img/salad.jpeg' %}" class="acc-img" alt=""> -->
+      </div>
+      <div class="col-md-8">
+        <h4>The most ethical diet just so happens to be the most environmentally sound diet and just so happens to be the healthiest. -- Dr. Michael Greger</h4>
+        </br>
+        <h4>Everything in food works together to create health or disease. The more we think that a single chemical characterizes a whole food, the more we stray into idiocy. -- T. Colin Campbell</h4>
+        </br>
+        <h4>Let food be thy medicine, and medicine be thy food. -- Hippocrates</h4>
+      </div>
     </div>
-</div>
-
-<h5>MORE STUFF, and a bit more</h5>
+  </div>
 
 {% endblock %}
