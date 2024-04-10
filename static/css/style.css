@@ -1,3 +1,14 @@
+a {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: x-large !important;
+}
+
+a:hover {
+    /* background-color: black; */
+    outline: 5px solid white;
+}
+
 .container {
     margin: 1rem;
     padding: 1rem;
@@ -37,6 +48,17 @@
     border-radius: 5px;
 }
 
+.szn-img {
+    /* height: 10rem; */
+    /* width: 100%; */
+    padding: 150px 0px 150px 0px;
+    background-color: green;
+    background-image: url(../img/produce.webp);
+    /* background-size: cover; */
+    background-position: center;
+    border-radius: 5px;
+}
+
 .def {
     padding: 2rem;
 }
@@ -49,13 +71,8 @@
     padding: 1rem 0rem 1rem 0rem;
 }
 
-a {
-    color: white !important;
-    font-weight: bold !important;
-    font-size: x-large !important;
-}
-
-a:hover {
-    /* background-color: black; */
-    outline: 5px solid white;
+.cite {
+    font-style: italic;
+    text-align: right;
+    padding-right: 1em;
 }
