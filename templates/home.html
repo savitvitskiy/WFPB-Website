@@ -5,7 +5,7 @@
 
 <!-- <h1>Home</h1> -->
 
-<div class="container section">
+<div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
         <div class="col">
@@ -29,20 +29,27 @@
     </div>
 </div>
 
-<div class="container section text-center">
+<div class="container text-center">
     <div class="row row-cols-2">
       <div class="col-6 col-md-4">
         <div class="acc-img"></div>
-        <!-- <img src="{% static 'img/salad.jpeg' %}" class="acc-img" alt=""> -->
       </div>
-      <div class="col-md-8">
-        <h4>The most ethical diet just so happens to be the most environmentally sound diet and just so happens to be the healthiest. -- Dr. Michael Greger</h4>
-        </br>
-        <h4>Everything in food works together to create health or disease. The more we think that a single chemical characterizes a whole food, the more we stray into idiocy. -- T. Colin Campbell</h4>
-        </br>
-        <h4>Let food be thy medicine, and medicine be thy food. -- Hippocrates</h4>
+      <div class="col-md-8 def">
+        <h5>What is a Whole Food Plant Based (WFPB) Diet?</h5>
+        <p><b>Whole Food</b>: Natural foods that are not heavily processed. That means whole, unrefined, or minimally refined ingredients.</p>
+        <p><b>Plant Based</b>: Food that comes from plants and is free of animal ingredients such as meat, milk, eggs, or honey.</p>
+        <p>There is overlap between WFPB and vegan diets, but there are also some key differences. A vegan diet can include highly processed imitation meats and cheeses; a WFPB diet eschews these products in favor of whole or minimally processed, close-to-nature foods that make it easy to meet your nutritional needs.</p>
+        <p><i>Forks Over Knives</i></p>
       </div>
     </div>
-  </div>
+</div>
+
+<div class="container">
+    <h5>Macronutrient, Vitamins, and Minerals</h5>
+    <p>Text goes here.</p>
+    <div class="d-grid gap-2">
+        <a class="btn btn-success" href="/nutrition" role="button">Explore</a>
+    </div>
+</div>
 
 {% endblock %}

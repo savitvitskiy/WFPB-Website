@@ -1,20 +1,11 @@
 .container {
-    max-width: 100% !important;
-}
-
-.section {
     margin: 1rem;
     padding: 1rem;
     max-width: 100% !important;
-    background-color: red;
+    background-color: beige;
 }
 
-.quote {
-    background-color: white;
-    padding: 1rem;
-}
-
-.container-fluid {
+.top-img {
     background-color: yellow;
     background-image: url(../img/menu.webp);
     background-repeat: no-repeat;
@@ -44,6 +35,10 @@
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+}
+
+.def {
+    padding: 2rem;
 }
 
 /* .card {
