@@ -38,8 +38,6 @@ a:hover {
 }
 
 .acc-img {
-    /* height: 10rem; */
-    /* width: 100%; */
     padding: 150px 0px 150px 0px;
     background-color: green;
     background-image: url(../img/salad.jpeg);
@@ -49,8 +47,6 @@ a:hover {
 }
 
 .szn-img {
-    /* height: 10rem; */
-    /* width: 100%; */
     padding: 150px 0px 150px 0px;
     background-color: green;
     background-image: url(../img/produce.webp);
