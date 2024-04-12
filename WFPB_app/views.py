@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from WFPB_app.models import Category
+from WFPB_app.models import Category, Season, Seasonal
 
 
 # Create your views here.
 def home(request):
     categories = Category.objects.all()
-    context = {"categories": categories}
+    seasons = Season.objects.all()
+    seasonals = Seasonal.objects.all()
+    context = {"categories": categories, "seasons": seasons, "seasonals": seasonals}
     return render(request, "home.html", context)
 
 

@@ -54,26 +54,34 @@
     </div>
 </div>
 
+{% for season in seasonals.seasons.all %}
+{{ season.name }}
+something
+{% endfor %}
+
 <div class="container text-center">
     <h5>Eat With The Seasons</h5>
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="szn-img">
-                <div class="container text-center">
-                    <div class="row">
-                      <div class="col">col</div>
-                      <div class="col">col</div>
-                      <div class="col">col</div>
-                      <div class="col">col</div>
-                    </div>
-                </div>
+          <div class="carousel-item active szn-img">
+
+            <div class="container text-center">
+              <!-- <div class="row"> -->
+                <!-- {% for season in seasons %}
+                <div class="col">{{ season.name }}</div>
+                {% endfor %} -->
+
+                <!-- {% for seasonal in seasonals %} -->
+                <!-- <div class="col">{{ seasonal }}</div> -->
+                <!-- {% endfor %} -->
+              <!-- </div> -->
             </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Winter</h5>
-                <p class="cite">United States Deparment of Agriculture</p>
+
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Winter</h5>
+                  <p class="cite">United States Deparment of Agriculture</p>
+              </div>
             </div>
-          </div>
           <div class="carousel-item">
             <div class="szn-img"></div>
             <div class="carousel-caption d-none d-md-block">
