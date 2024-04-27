@@ -16,43 +16,48 @@ a:hover {
     background-color: beige;
 }
 
-.top-img {
-    background-color: yellow;
-    background-image: url(../img/menu.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* background-blend-mode: darken; */
-    /* color: white; */
-    padding: 50px 0px 50px 0px;
-}
-
 .background-image {
-    background-color: yellow;
+    background-color: beige;
     /* background-image: url( {{category.image.url}} ); */
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
+}
+
+.top {
+    background-image: url(../img/menu.webp);
+    padding: 50px 0px 50px 0px;
+    /* background-blend-mode: darken; */
+    /* color: white; */
+}
+
+.food {
+    background-color: white;
     border-radius: 50%;
     padding: 50px;
+    border: solid 2px white;
+    /* box-shadow: 0 0 0 4px white; */
+    /* outline: solid 2px white; */
 }
 
-.acc-img {
-    padding: 150px 0px 150px 0px;
+/* .highlight {
     background-color: green;
+} */
+
+.meal {
+    padding: 150px 0px 150px 0px;
     background-image: url(../img/salad.jpeg);
-    background-size: cover;
-    background-position: center;
     border-radius: 5px;
 }
 
-.szn-img {
+.field {
+    background-size: auto;
+    background-repeat: repeat-x;
     padding: 150px 0px 150px 0px;
-    background-color: green;
-    background-image: url(../img/produce.webp);
-    /* background-size: cover; */
-    background-position: center;
-    border-radius: 5px;
+    /* background-image: url(../img/produce.webp); */
+    /* background-color: #198754; */
+    background-color: tan;
+    border-radius: 5px;    
 }
 
 .def {

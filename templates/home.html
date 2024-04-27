@@ -13,7 +13,7 @@
                 <div class="row g-0">
                     <div class="col-md-3">
                         {% if category.image %}
-                        <div class="background-image" style="background-image: url( {{category.image.url}} )"></div>
+                        <div class="background-image food" style="background-image: url( {{category.image.url}} )"></div>
                         {% endif %}
                     </div>
                     <div class="col-md-8">
@@ -32,7 +32,7 @@
 <div class="container text-center">
     <div class="row row-cols-2">
       <div class="col-6 col-md-4">
-        <div class="acc-img"></div>
+        <div class="background-image meal"></div>
       </div>
       <div class="col-md-8 def">
         <h5>What is a Whole Food Plant Based (WFPB) Diet?</h5>
@@ -54,65 +54,52 @@
     </div>
 </div>
 
-{% for season in seasonals.seasons.all %}
-{{ season.name }}
-something
-{% endfor %}
-
 <div class="container text-center">
-    <h5>Eat With The Seasons</h5>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active szn-img">
-
-            <div class="container text-center">
-              <!-- <div class="row"> -->
-                <!-- {% for season in seasons %}
-                <div class="col">{{ season.name }}</div>
-                {% endfor %} -->
-
-                <!-- {% for seasonal in seasonals %} -->
-                <!-- <div class="col">{{ seasonal }}</div> -->
-                <!-- {% endfor %} -->
-              <!-- </div> -->
-            </div>
-
-              <div class="carousel-caption d-none d-md-block">
-                  <h5>Winter</h5>
-                  <p class="cite">United States Deparment of Agriculture</p>
-              </div>
-            </div>
-          <div class="carousel-item">
-            <div class="szn-img"></div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Spring</h5>
-                <p class="cite">United States Deparment of Agriculture</p>
+<h5>Eat With The Seasons</h5>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    {% for season in seasons %}
+        
+    {% if season.id == 1 %}
+    <div class="carousel-item active background-image field">
+    {% else %}
+    <div class="carousel-item background-image field">
+    {% endif %}
+    
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ season.name.upper }}</h5>
+        <br>
+        <div class="row">
+        {% for seasonal in season.seasonals.all %}
+          <div class="col">
+            <div class="background-image food" style="background-image: url( {{seasonal.image.url}} )">
+              <!-- <span class="highlight">{{ seasonal.name }}</span> -->
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="szn-img"></div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Summer</h5>
-                <p class="cite">United States Deparment of Agriculture</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="szn-img"></div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Autumn</h5>
-                <p class="cite">United States Deparment of Agriculture</p>
-            </div>
-          </div>
+        {% endfor %}
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <br>
+        <p class="cite">United States Deparment of Agriculture</p>
       </div>
+    </div>
+    {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </div>
 
 {% endblock %}

@@ -17,9 +17,8 @@ class Season(models.Model):
 
 class Seasonal(models.Model):
     name = models.CharField(max_length=20)
-    # categories = models.ManyToManyField('Category', related_name='posts')
     # season = models.CharField(max_length=20)
-    season = models.ManyToManyField('Season')
+    season = models.ManyToManyField(Season, related_name="seasonals")
     image = models.ImageField(upload_to="static/img", null=True, blank=True)
 
     def __str__(self):
