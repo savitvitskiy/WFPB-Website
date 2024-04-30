@@ -9,7 +9,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 background-image cat">
                 <div class="row g-0">
                     <div class="col-md-3">
                         {% if category.image %}
@@ -50,7 +50,7 @@
     <p><b>Micronutrients</b>: Also referred to as vitamins and minerals, are no less important than macronutrients. They are just needed in smaller amounts. They include vitamins, such as C, D and K, and minerals such as iron, magnesium and calcium. While micronutrients do not give us energy, they are critical for the many chemical reactions that occur in our bodies, including extracting energy from food and creating new cells.</p>
     <p class="cite">The Ohio State University, College of Medicine</p>
     <div class="d-grid gap-2">
-        <a class="btn btn-success" href="/nutrition" role="button">Explore Nutrition Calculator</a>
+        <a class="btn btn-success" href="/nutrition" role="button">Explore Nutrient Calculator</a>
     </div>
 </div>
 
@@ -73,18 +73,15 @@
     {% endif %}
     
       <div class="carousel-caption d-none d-md-block">
-        <h5>{{ season.name.upper }}</h5>
-        <br>
+        <h5> {{ season.name }} </h5>
         <div class="row">
         {% for seasonal in season.seasonals.all %}
           <div class="col">
-            <div class="background-image food" style="background-image: url( {{seasonal.image.url}} )">
-              <!-- <span class="highlight">{{ seasonal.name }}</span> -->
-            </div>
+            <div class="background-image food" style="background-image: url( {{seasonal.image.url}} )"></div>
+            <p>{{ seasonal.name }}</p>
           </div>
         {% endfor %}
         </div>
-        <br>
         <p class="cite">United States Deparment of Agriculture</p>
       </div>
     </div>
