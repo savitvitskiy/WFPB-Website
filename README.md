@@ -6,4 +6,4 @@ This project contains data and resources for the WFPB lifestyle. The user will b
 Technologies Used: Python, Django, HTML, CSS
 
 Screenshot of Home Page:
-<img width="1499" alt="WFPB Home Page" src="static/img/WFPB_Screenshot.png">
+<img width="1499" alt="WFPB Home Page" src="static/img/screenshot.png">
