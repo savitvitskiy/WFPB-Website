@@ -7,14 +7,14 @@ a {
 .outlined {
     color: white;
     text-shadow:
-      -1px -1px 0 #707070,
-       0   -1px 0 #707070,
-       1px -1px 0 #707070,
-       1px  0   0 #707070,
-       1px  1px 0 #707070,
-       0    1px 0 #707070,
-      -1px  1px 0 #707070,
-      -1px  0   0 #707070;
+      -1px -1px 0 #5B5858,
+       0   -1px 0 #5B5858,
+       1px -1px 0 #5B5858,
+       1px  0   0 #5B5858,
+       1px  1px 0 #5B5858,
+       0    1px 0 #5B5858,
+      -1px  1px 0 #5B5858,
+      -1px  0   0 #5B5858;
   }
 
 a:hover {
@@ -27,7 +27,7 @@ a:hover {
     margin: 1rem;
     padding: 1rem;
     max-width: 100% !important;
-    background-image: url(../img/produce_doodles.png);
+    background-image: url(../img/doodles.png);
     background-size: contain;
     background-blend-mode: darken;
 }
@@ -41,7 +41,7 @@ a:hover {
 }
 
 .top {
-    background-image: url(../img/menu.webp);
+    background-image: url(../img/wfpb.jpeg);
     padding: 50px 0px 50px 0px;
 }
 
@@ -59,11 +59,12 @@ a:hover {
     padding: 150px 0px 150px 0px;
     background-image: url(../img/salad.jpeg);
     border-radius: 5px;
+    border: solid 1px white;
 }
 
 .cat {
     color: white !important;
-    background-image: url(../img/produce_doodles.png);
+    background-image: url(../img/doodles.png);
     background-position-y: 70%;
     border: 1px solid white !important;
 }
@@ -71,7 +72,7 @@ a:hover {
 .field {
     padding: 150px 0px 150px 0px;
     background-color: gray;
-    background-image: url(../img/produce_doodles.png);
+    background-image: url(../img/doodles.png);
     background-size: contain;
     background-repeat: repeat;
     border-radius: 5px;
