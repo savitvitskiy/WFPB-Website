@@ -1,5 +1,65 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Nutrition</h1>
+<div class="container">
+    <h4>Macronutrients & Micronutrients</h4>
+</div>
+
+<div class="container">
+    <p>Type a food below to view the nutrition summary.</p>
+    <input class="form-control" type="text" placeholder="Type Food" aria-label="default input example">
+    <div class="container d_bord">
+        <p>Nutrition Summary</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card bgcol">
+                <div class="card-body">
+                  <h5 class="card-title">Macronutrients</h5>
+                  <p class="card-text">Mac #1</p>
+                  <p class="card-text">Mac #2</p>
+                  <p class="card-text">Mac #3</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bgcol">
+                <div class="card-body">
+                  <h5 class="card-title">Vitamins</h5>
+                  <p class="card-text">Vit #1</p>
+                  <p class="card-text">Vit #2</p>
+                  <p class="card-text">Vit #3</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card bgcol">
+                  <div class="card-body">
+                    <h5 class="card-title">Minerals</h5>
+                    <p class="card-text">Min #1</p>
+                    <p class="card-text">Min #2</p>
+                    <p class="card-text">Min #3</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="container">
+    <p>Choose a macronutrient, vitamin, or mineral below to view the foods with the highest value.</p>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select Nutrient</option>
+        <option value="1">Macronutrient</option>
+        <option value="2">Vitamin</option>
+        <option value="3">Mineral</option>
+    </select>
+    <div class="container d_bord">
+        <p class="card-text">Food #1</p>
+        <p class="card-text">Food #2</p>
+        <p class="card-text">Food #3</p>
+        <p class="card-text">Food #4</p>
+        <p class="card-text">Food #5</p>
+    </div>
+</div>
+
 {% endblock %}

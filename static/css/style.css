@@ -79,6 +79,16 @@ a:hover {
     border: 1px solid white;
 }
 
+.d_bord {
+    border: 1px dashed white;
+}
+
+.bgcol {
+    background-color: #909090 !important;
+    background-image: url(../img/light_border.png);
+    background-size: contain;
+}
+
 .def {
     padding: 2rem;
 }
