@@ -1,5 +1,31 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1>About</h1>
+<div class="container">
+    <p>One of the most powerful steps you can take to improve your health, boost energy levels, and prevent chronic diseases is to move to a plant-based diet. If you’ve seen Forks Over Knives, you know that science shows changing your nutrition is a powerful way to live longer, help the environment, and reduce your risk of getting sick.</p>
+    <p class="cite">Forks Over Knives</p>
+</div>
+
+<div class="container">
+    <h4>Resources</h4>
+    <p>Want to learn more about a plant-based diet? Check out the resources below.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        {% for resource in resources %}
+        <div class="col">
+          <div class="card h-100 bgcol">
+            <div class="card-body">
+              <h5 class="card-title">{{ resource.title }}</h5>
+              <!-- <p class="card-text">{{ resource.body }}</p> -->
+              <div class="d-grid gap-2">
+                <a href="{{ resource.link }}" class="btn btn-success">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
 {% endblock %}

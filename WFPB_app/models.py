@@ -23,3 +23,12 @@ class Seasonal(models.Model):
 
     def __str__(self):
         return self.name
+
+class Resources(models.Model):
+    title = models.CharField(max_length=50)
+    body = models.TextField(default=True)
+    link = models.URLField(max_length=128, unique=True, blank=True)
+    image = models.ImageField(upload_to="static/img", null=True, blank=True)
+
+    def __str__(self):
+        return self.title

@@ -4,6 +4,10 @@ a {
     font-size: x-large !important;
 }
 
+/* body {
+    background-color: gray !important;
+} */
+
 .outlined {
     color: white;
     text-shadow:
@@ -80,13 +84,16 @@ a:hover {
 }
 
 .d_bord {
-    border: 1px dashed white;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .bgcol {
     background-color: #909090 !important;
     background-image: url(../img/light_border.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: right;
+    /* background-size: contain; */
 }
 
 .def {

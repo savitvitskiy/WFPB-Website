@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from WFPB_app.models import Category, Season, Seasonal
+from WFPB_app.models import Category, Season, Seasonal, Resources
 
 
 # Create your views here.
@@ -20,4 +20,6 @@ def planner(request):
 
 
 def about(request):
-    return render(request, "about.html")
+    resources = Resources.objects.all()
+    context = {"resources": resources}
+    return render(request, "about.html", context)
