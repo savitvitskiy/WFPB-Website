@@ -91,16 +91,17 @@ a:hover {
 .bgcol {
     background-color: #909090 !important;
     background-image: url(../img/light_border.png);
-    background-size: cover;
-    background-position: right;
-    /* background-size: contain; */
+    /* background-size: cover; */
+    /* background-position: right; */
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .def {
     padding: 2rem;
 }
 
-.card-title {
+.cat_card {
     padding: 1rem 0rem 1rem 0rem;
 }
 
