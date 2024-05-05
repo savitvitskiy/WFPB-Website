@@ -83,14 +83,19 @@ a:hover {
     border: 1px solid white;
 }
 
+.resources {
+    padding: 50px 200px 50px 200px;
+}
+
 .d_bord {
-    border: 1px solid white;
+    border: 1px solid white !important;
     border-radius: 5px;
 }
 
 .bgcol {
+    color: white !important;
     background-color: #909090 !important;
-    background-image: url(../img/light_border.png);
+    background-image: url(../img/doodles.png);
     /* background-size: cover; */
     /* background-position: right; */
     background-size: contain;

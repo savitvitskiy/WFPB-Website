@@ -7,22 +7,36 @@
     <p class="cite">Forks Over Knives</p>
 </div>
 
-<div class="container">
-    <h4>Resources</h4>
-    <p>Want to learn more about a plant-based diet? Check out the resources below.</p>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        
-        {% for resource in resources %}
-        <div class="col">
-          <div class="card h-100 bgcol">
-            <div class="card-body">
-              <a href="{{ resource.link }}" target="_blank"><h5 class="card-title">{{ resource.title }}</h5></a>
-              <p class="card-text">{{ resource.body }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
+<div class="container text-center">
+  <h4 class="text-center">Resources</h4>
+  <!-- <p class="text-center">Want to learn more about a plant-based diet? Check out the resources below.</p> -->
+  <div id="carouselExampleCaptions" class="carousel slide">
 
+    <div class="carousel-inner">
+      {% for resource in resources %}  
+      
+      {% if resource.id == 1 %}
+      <div class="carousel-item active background-image field resources">
+      {% else %}
+      <div class="carousel-item background-image field resources">
+      {% endif %}
+
+      <a href="{{ resource.link }}" target="_blank">{{ resource.title }}</a>
+      <p>{{ resource.body }}</p>
+
+      </div>
+
+      {% endfor %}
     </div>
-</div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
 {% endblock %}
