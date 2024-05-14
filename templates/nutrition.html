@@ -7,6 +7,33 @@
 </div>
 
 <div class="container">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="input-group">
+      <input class="form-control" type="text" placeholder="Type Food" aria-label="default input example" name="query">
+      <div class="input-group-btn">
+        <button class="btn btn-success" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div>
+    <h4>Search Results</h4>
+    {% if error %}
+    <p>{{ error }}</p>
+      {% else %}
+      <ul>
+        {% for result in results %}
+            <li>{{ result.description }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
     <p>Type a food below to view the nutrition summary.</p>
     <input class="form-control" type="text" placeholder="Type Food" aria-label="default input example">
     <div class="container">
