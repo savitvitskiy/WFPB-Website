@@ -5,10 +5,6 @@ a {
     text-decoration: none !important;
 }
 
-/* body {
-    background-color: gray !important;
-} */
-
 .outlined {
     color: white;
     text-shadow:
@@ -115,4 +111,11 @@ a:hover {
     font-style: italic;
     text-align: right;
     padding-right: 1em;
+}
+
+.scrln {
+    max-height: 100px; 
+    overflow: scroll;
+    border-left: 1px solid white;
+    border-radius: 5px;
 }

@@ -12,7 +12,6 @@ def home(request):
 
 
 def nutrition(request):
-    # return render(request, "nutrition.html")
     if request.method == 'POST':
         query = request.POST.get('query', '')
         api_key = "u6b0HO7rTfnJtfbgbehB5ThSQcqhABLg6dE9Pc2p"

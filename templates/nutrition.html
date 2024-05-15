@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% load static %}
 
 {% block content %}
@@ -7,6 +8,7 @@
 </div>
 
 <div class="container">
+  <p>Type a food below to view the nutrition summary.</p>
   <form action="" method="post">
     {% csrf_token %}
     <div class="input-group">
@@ -19,58 +21,49 @@
     </div>
   </form>
 
-  <div>
-    <h4>Search Results</h4>
+  {% if results|length > 0 %}
+  <div class="container scrln">
     {% if error %}
-    <p>{{ error }}</p>
-      {% else %}
-      <ul>
-        {% for result in results %}
-            <li>{{ result.description }}</li>
-        {% endfor %}
-      </ul>
+      <p>{{ error }}</p>
+    {% else %}
+    <p><i>Select best match below.</i></p>
+    {% for result in results %}
+      <p>{{ result.description }}</p>
+    {% endfor %}
     {% endif %}
   </div>
-</div>
+  {% endif %}
 
-<div class="container">
-    <p>Type a food below to view the nutrition summary.</p>
-    <input class="form-control" type="text" placeholder="Type Food" aria-label="default input example">
-    <div class="container">
-        <p>Nutrition Summary</p>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card bgcol d_bord">
-                <div class="card-body">
-                  <h5 class="card-title">Macronutrients</h5>
-                  <p class="card-text">Mac #1</p>
-                  <p class="card-text">Mac #2</p>
-                  <p class="card-text">Mac #3</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bgcol d_bord">
-                <div class="card-body">
-                  <h5 class="card-title">Vitamins</h5>
-                  <p class="card-text">Vit #1</p>
-                  <p class="card-text">Vit #2</p>
-                  <p class="card-text">Vit #3</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-                <div class="card bgcol d_bord">
-                  <div class="card-body">
-                    <h5 class="card-title">Minerals</h5>
-                    <p class="card-text">Min #1</p>
-                    <p class="card-text">Min #2</p>
-                    <p class="card-text">Min #3</p>
-                  </div>
-                </div>
-            </div>
+  <div class="container">
+    <p>Nutrition Information</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card bgcol d_bord">
+          <div class="card-body">
+            <h5 class="card-title">Macronutrients</h5>
+            <p class="card-text">Mac #1</p>
           </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bgcol d_bord">
+          <div class="card-body">
+            <h5 class="card-title">Vitamins</h5>
+            <p class="card-text">Mac #1</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bgcol d_bord">
+          <div class="card-body">
+            <h5 class="card-title">Minerals</h5>
+            <p class="card-text">Mac #1</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
 </div>
 
 <div class="container">
