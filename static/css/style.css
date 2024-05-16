@@ -117,5 +117,6 @@ a:hover {
     max-height: 100px; 
     overflow: scroll;
     border-left: 1px solid white;
+    border-right: 1px solid white;
     border-radius: 5px;
 }

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from WFPB_app.models import Category, Season, Seasonal, Resources
 from .utils import search_food
+from decouple import config
 
 # Create your views here.
 def home(request):
@@ -14,7 +15,7 @@ def home(request):
 def nutrition(request):
     if request.method == 'POST':
         query = request.POST.get('query', '')
-        api_key = "u6b0HO7rTfnJtfbgbehB5ThSQcqhABLg6dE9Pc2p"
+        api_key = config("API_KEY")
         
         search_results = search_food(query, api_key)
         if search_results:
