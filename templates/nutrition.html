@@ -22,31 +22,49 @@
   </form>
 
   {% if results %}
-  <div class="container scrln">
+<div class="container scrln">
     {% if error %}
     <p>{{ error }}</p>
     {% else %}
-      <p><i>Select best match below.</i></p>
-      {% for result in results %}
-        <p>{{ result.description }}</p>
-          <!-- <table>
-            <tr>
-              <td>Name</td>
-              <td>Amount</td>
-              <td>Unit</td>
-            </tr>
-            {% for nutrient in result.foodNutrients %}
-            <tr>
-              <td>{{ nutrient.nutrientName }}</td>
-              <td>{{ nutrient.value }}</td>
-              <td>{{ nutrient.unitName }}</td>
-            </tr>
-            {% endfor %}
-          </table> -->
-      {% endfor %}
+    <p><i>Select the best match below.</i></p>
+    {% for result in results %}
+    <div class="food-item">
+        <span class="food-description clickable">{{ result.description }}</span>
+        
+        <div class="nutrients">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Amount</td>
+                    <td>Unit</td>
+                </tr>
+                {% for nutrient in result.foodNutrients %}
+                <tr>
+                    <td>{{ nutrient.nutrientName }}</td>
+                    <td>{{ nutrient.value }}</td>
+                    <td>{{ nutrient.unitName }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+    {% endfor %}
     {% endif %}
-  </div>
-  {% endif %}
+</div>
+{% endif %}
+
+<script>
+  $(document).ready(function() {
+      // Hide nutrients initially
+      $('.nutrients').hide();
+      
+      // Attach click event handler to food items
+      $('.food-description').click(function() {
+          $(this).next('.nutrients').toggle();
+      });
+  });
+  </script>
 
   <div class="container">
     <p>Nutrition Information</p>
@@ -79,8 +97,6 @@
   </div>
   <p class="cite">United States Deparment of Agriculture</p>
 </div>
-
-<p>{{ results }}</p>
 
 <div class="container">
     <p>Choose a macronutrient, vitamin, or mineral below to view the foods with the highest value.</p>

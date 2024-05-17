@@ -120,3 +120,11 @@ a:hover {
     border-right: 1px solid white;
     border-radius: 5px;
 }
+
+.food-item {
+    margin-bottom: 10px; /* Adjust spacing between food items */
+}
+
+.clickable {
+    cursor: pointer;
+}
