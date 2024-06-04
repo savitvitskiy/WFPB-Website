@@ -114,7 +114,7 @@ a:hover {
 }
 
 .scrln {
-    max-height: 100px; 
+    max-height: 250px; 
     overflow: scroll;
     border-left: 1px solid white;
     border-right: 1px solid white;
@@ -128,3 +128,8 @@ a:hover {
 .clickable {
     cursor: pointer;
 }
+
+table, th, td {
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+  }
